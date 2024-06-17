@@ -1,0 +1,33 @@
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="Style/style.css">
+<link rel="manifest" href="manifest.json"> 
+
+<title>PWA Apps</title>
+</head>
+<body>
+    <div class="h1">
+<h1 style="color: rgb(0, 0, 0);margin-left: 20px;">ABOUT ME</h1>
+</div>
+<P style="margin-left: 20px;">Jay Toh Bing Yang, 18, studies Information Technology at Sultan Saiful Rijal Campus. </P>
+<img src="image/image.jpg"style="height:400px; width: 350;margin-left: 20px;">
+
+<script src="app.js"></script>
+<script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("serviceworker.js")
+        .then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(function(error) {
+            console.log('Service Worker registration failed:', error);
+        });
+    } else {
+        console.log('Service Workers are not supported in this browser.');
+    }
+</script>
+
+</body>
+</html>
